@@ -1,12 +1,24 @@
-# React + Vite
+🚀 Pasos para iniciar correctamente:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Abrí una terminal en la carpeta del backend y ejecutá:
 
-Currently, two official plugins are available:
+node server.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Te debería mostrar:
 
-## Expanding the ESLint configuration
+corriendo en http://localhost:3000
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+En otra terminal, andá a la carpeta de tu frontend (vite-project) y ejecutá:
+
+npm run dev
+
+Esto te va a abrir tu React app en http://localhost:5173.
+
+En tu Home.jsx, asegurate que el fetch apunte al puerto 3000 (que es el de tu backend actual):
+
+useEffect(() => {
+fetch("http://localhost:3000/api/zelda")
+.then((res) => res.json())
+.then((data) => setGames(data))
+.catch((err) => console.error("Error cargando juegos:", err));
+}, []);
