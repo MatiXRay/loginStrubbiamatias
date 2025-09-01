@@ -6,3 +6,21 @@
     gap:1rem;
 }
 
+.formulario input {
+  width: 400px;        /* ancho del input */
+  height: 50px;        /* alto del input */
+  padding: 0 15px;     /* espacio interno para escribir */
+  margin-bottom: 20px; /* separación entre inputs */
+  font-size: 18px;     /* tamaño de letra */
+  border-radius: 8px;  /* bordes redondeados */
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.formulario button {
+  width: 420px;        /* ancho similar a los inputs */
+  height: 50px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
