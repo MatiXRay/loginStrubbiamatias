@@ -1,24 +1,28 @@
-🚀 Pasos para iniciar correctamente:
+Instalar dependencias del frontend (Vite/React)
 
-Abrí una terminal en la carpeta del backend y ejecutá:
+npm install
+
+
+Ir a la carpeta del backend (si lo tenés separado, por ejemplo /backend)
+
+cd backend
+npm install
+
+
+Levantar el backend
 
 node server.js
 
-Te debería mostrar:
 
-corriendo en http://localhost:3000
+👉 Te debería decir:
+corriendo en http://localhost:3000 (o el puerto que pusiste).
 
-En otra terminal, andá a la carpeta de tu frontend (vite-project) y ejecutá:
+Levantar el frontend
+Volvé a la carpeta del frontend (si saliste de ella) y corré:
 
 npm run dev
 
-Esto te va a abrir tu React app en http://localhost:5173.
 
-En tu Home.jsx, asegurate que el fetch apunte al puerto 3000 (que es el de tu backend actual):
+👉 Esto abre tu app en http://localhost:5173.
 
-useEffect(() => {
-fetch("http://localhost:3000/api/zelda")
-.then((res) => res.json())
-.then((data) => setGames(data))
-.catch((err) => console.error("Error cargando juegos:", err));
-}, []);
+✅ Con eso ya vas a tener tu login + fetch al backend funcionando en otra PC.
